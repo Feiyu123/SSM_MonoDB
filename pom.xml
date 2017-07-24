@@ -1,0 +1,140 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.lrq</groupId>
+  <artifactId>SSM_MonoDB</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>SSM_MonoDB Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <properties>  
+      <spring.version>3.2.3.RELEASE</spring.version>  
+      <slf4j.version>1.7.2</slf4j.version>  
+      <log4j.version>1.2.16</log4j.version>  
+      <junit.version>4.11</junit.version>  
+      <jsonlib.version>2.4</jsonlib.version>  
+      <shiro.version>1.2.2</shiro.version>  
+  </properties>
+  <dependencies>
+  <dependency>  
+            <groupId>org.springframework</groupId>  
+            <artifactId>spring-webmvc</artifactId>  
+            <version>${spring.version}</version>  
+        </dependency>  
+        <dependency>  
+            <groupId>org.springframework.data</groupId>  
+            <artifactId>spring-data-mongodb</artifactId>  
+            <version>1.2.0.RELEASE</version>  
+        </dependency>  
+        <dependency>  
+            <groupId>org.springframework</groupId>  
+            <artifactId>spring-tx</artifactId>  
+            <version>${spring.version}</version>  
+        </dependency>  
+        <dependency>  
+            <groupId>org.springframework</groupId>  
+            <artifactId>spring-test</artifactId>  
+            <version>${spring.version}</version>  
+            <scope>test</scope>  
+            <exclusions>  
+                <exclusion>  
+                    <groupId>commons-logging</groupId>  
+                    <artifactId>commons-logging</artifactId>  
+                </exclusion>  
+            </exclusions>  
+        </dependency>  
+        <!-- Json -->  
+        <dependency>  
+            <groupId>org.codehaus.jackson</groupId>  
+            <artifactId>jackson-core-lgpl</artifactId>  
+            <version>1.8.1</version>  
+        </dependency>  
+        <dependency>  
+            <groupId>org.codehaus.jackson</groupId>  
+            <artifactId>jackson-mapper-lgpl</artifactId>  
+            <version>1.8.1</version>  
+        </dependency>  
+        <dependency>  
+            <groupId>net.sf.json-lib</groupId>  
+            <artifactId>json-lib</artifactId>  
+            <version>${jsonlib.version}</version>  
+            <classifier>jdk15</classifier>  
+        </dependency>  
+        <!-- end of Json -->  
+  
+        <!-- logging -->  
+        <dependency>  
+            <groupId>org.slf4j</groupId>  
+            <artifactId>slf4j-api</artifactId>  
+            <version>${slf4j.version}</version>  
+        </dependency>  
+        <dependency>  
+            <groupId>org.slf4j</groupId>  
+            <artifactId>jcl-over-slf4j</artifactId>  
+            <version>${slf4j.version}</version>  
+        </dependency>  
+        <dependency>  
+            <groupId>org.slf4j</groupId>  
+            <artifactId>slf4j-log4j12</artifactId>  
+            <version>${slf4j.version}</version>  
+        </dependency>   
+        <dependency>  
+            <groupId>log4j</groupId>  
+            <artifactId>log4j</artifactId>  
+            <version>${log4j.version}</version>  
+            <scope>provided</scope>  
+        </dependency>  
+        <!-- end of logging -->  
+        <!-- fileUpload -->  
+        <dependency>  
+            <groupId>commons-fileupload</groupId>  
+            <artifactId>commons-fileupload</artifactId>  
+            <version>1.2.2</version>  
+        </dependency>  
+          
+        <!-- end of fileUpload -->  
+        <!--io -->  
+        <dependency>  
+            <groupId>commons-io</groupId>  
+            <artifactId>commons-io</artifactId>  
+            <version>2.4</version>  
+        </dependency>  
+          
+        <dependency>  
+            <groupId>javax</groupId>  
+            <artifactId>javaee-web-api</artifactId>  
+            <version>7.0</version>  
+            <scope>provided</scope>  
+        </dependency>    
+  
+        <dependency>  
+            <groupId>javax.servlet</groupId>  
+            <artifactId>jstl</artifactId>  
+            <version>1.2</version>  
+        </dependency> 
+        
+        
+         <dependency>  
+            <groupId>junit</groupId>  
+            <artifactId>junit</artifactId>  
+            <version>${junit.version}</version>  
+            <scope>test</scope>  
+        </dependency>   
+    
+  </dependencies>
+  <build>  
+        <finalName>SSM_MonoDB</finalName>  
+        <plugins>  
+            <plugin>  
+                <groupId>org.apache.tomcat.maven</groupId>  
+                <artifactId>tomcat7-maven-plugin</artifactId>  
+                <version>2.0-beta-1</version>  
+                <configuration>  
+                    <uriEncoding>utf-8</uriEncoding>  
+                    <port>8070</port>  
+                    <path>/</path>  
+                </configuration>  
+            </plugin>  
+        </plugins>  
+    </build>  
+</project>
